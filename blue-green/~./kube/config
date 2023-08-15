@@ -1,0 +1,32 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/quang/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Sat, 22 Jul 2023 22:23:44 +07
+        provider: minikube.sigs.k8s.io
+        version: v1.31.1
+      name: cluster_info
+    server: https://localhost:38763
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Sat, 22 Jul 2023 22:23:44 +07
+        provider: minikube.sigs.k8s.io
+        version: v1.31.1
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/quang/.minikube/profiles/minikube/client.crt
+    client-key: /home/quang/.minikube/profiles/minikube/client.key
